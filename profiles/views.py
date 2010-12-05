@@ -269,8 +269,9 @@ def profile_detail(request, username, public_profile_field=None,
     try:
         profile_obj = user.get_profile()
     except ObjectDoesNotExist:
-        #return HttpResponse('<h1>No account. Create one now.</h1>')
-        pass
+        reverse('create_profile', kwargs={
+            'user': request.user}))
+
     #profile_obj = user.get_profile()
     
     if public_profile_field is not None and \
