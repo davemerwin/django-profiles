@@ -269,8 +269,7 @@ def profile_detail(request, username, public_profile_field=None,
     try:
         profile_obj = user.get_profile()
     except ObjectDoesNotExist:
-        reverse('create_profile', kwargs={
-            'user': request.user}))
+        reverse('create_profile', kwargs={'user': request.user}))
 
     #profile_obj = user.get_profile()
     
