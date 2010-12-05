@@ -269,7 +269,7 @@ def profile_detail(request, username, public_profile_field=None,
     try:
         profile_obj = user.get_profile()
     except ObjectDoesNotExist:
-        return HttpResponseRedirect(reverse('create_profile', kwargs={'user': request.user}))
+        return HttpResponseRedirect(reverse('create_profile'))
 
     #profile_obj = user.get_profile()
     
