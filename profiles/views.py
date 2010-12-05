@@ -266,10 +266,12 @@ def profile_detail(request, username, public_profile_field=None,
     
     """
     user = get_object_or_404(User, username=username)
-    try:
-        profile_obj = user.get_profile()
+    # try:
+    #     profile_obj = user.get_profile()
     # except ObjectDoesNotExist:
-    #    raise Http404
+    #     raise Http404
+    profile_obj = user.get_profile()
+    
     if public_profile_field is not None and \
        not getattr(profile_obj, public_profile_field):
         profile_obj = None
