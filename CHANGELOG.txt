@@ -2,6 +2,9 @@
 django-profiles changelog
 =========================
 
+Version 0.3, 4 December 2010:
+-----------------------------
+* Changed the return for the profile_detail so that it's a prompt to create a profile instead of a 404 
 
 Version 0.2, 6 November 2008:
 -----------------------------
