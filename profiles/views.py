@@ -270,7 +270,7 @@ def profile_detail(request, username, public_profile_field=None,
         profile_obj = user.get_profile()
     except ObjectDoesNotExist:
         if request.user.username == username and request.user.is_authenticated():
-        return HttpResponseRedirect(reverse('profiles_create_profile'))
+            return HttpResponseRedirect(reverse('profiles_create_profile'))
         raise Http404
 
     #profile_obj = user.get_profile()
